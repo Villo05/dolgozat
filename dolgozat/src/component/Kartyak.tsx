@@ -1,24 +1,25 @@
-import { TANULOSZOBAK, type tanuloszobakTipus } from '../adatok'
+import { type tanuloszobakTipus } from '../adatok'
 import Kartya from './Kartya'
 import './Kartya.css'
 
 interface kartyakProps{
-    elem:tanuloszobakTipus
+    elem:tanuloszobakTipus[]
+    kattintas: (id:number)=> void
 }
 
-export default function Kartyak({elem}:kartyakProps){
+export default function Kartyak({elem, kattintas}:kartyakProps){
     
     
 
-    return(
-        <>
-            <div>
-                {TANULOSZOBAK.map((szoba)=>(
-                    <Kartya key={szoba.id} elem={TANULOSZOBAK[0]}
-                    />
-                ))}
-                
-            </div>
-        </>
+    return (
+        <div className="kartyak">
+            {elem.map((szoba) => (
+                <Kartya
+                    key={szoba.id}
+                    elem={szoba}
+                    kattintas={kattintas}
+                />
+            ))}
+        </div>
     )
 }

@@ -1,6 +1,60 @@
-.kartya{
-    border: 2px;
-    margin: auto;
-    padding: 2pt;
-    
+
+.kartyak {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.kartya {
+    background-color: rgb(194, 218, 224);
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.kartya h2 {
+    margin-top: 0;
+    color: #495c74;
+}
+
+.kartya p {
+    margin: 12px 0;
+}
+
+.kartya button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #495c74;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.kartya button:hover {
+    background-color: #304e85;
+}
+
+
+/* Tablet */
+@media (max-width: 900px) {
+    .kartyak {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobil */
+@media (max-width: 600px) {
+    .kartyak {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .kartya {
+        padding: 20px;
+    }
 }

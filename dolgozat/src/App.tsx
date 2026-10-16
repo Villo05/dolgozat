@@ -5,10 +5,14 @@ import { TANULOSZOBAK } from './adatok'
 
 
 function App() {
-  const [foglal, setFoglal]= useState(0)
+  const [foglal, setFoglal]= useState(TANULOSZOBAK)
 
-  function kattintas(){
-      setFoglal(foglal + 1)
+  function kattintas(id: number) {
+        setFoglal(foglal.map((szoba) =>
+            szoba.id === id && szoba.foglalt_helyek < szoba.ferohely
+                ? {...szoba, foglalt_helyek: szoba.foglalt_helyek + 1}
+                : szoba
+        ))
   }
 
   return (
@@ -16,11 +20,11 @@ function App() {
         <div>
           <header>
                 <h1>Tanulószobák neked</h1>
-                <p>Talál meg számodra megfelelő tanulószobát!</p>
+                <p>Találd meg számodra megfelelő tanulószobát!</p>
             </header>
             <main>
                 <Kartyak 
-                    elem={TANULOSZOBAK}
+                    elem={foglal}
                     kattintas={kattintas}
                 />
             </main>
