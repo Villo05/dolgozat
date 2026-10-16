@@ -1,7 +1,7 @@
 
 type szobatipusok =  "egyéni tanulás"| "csoportmunka"|  "számítógépes terem"| "csendes olvasóterem";
 /* határozd meg a további szükséges típusokat */
-export type tanuloszobakProps={
+export type tanuloszobakTipus={
     id:number,
     szoba_nev : String,
     szobatipus : szobatipusok,
@@ -10,7 +10,7 @@ export type tanuloszobakProps={
     foglalt_helyek:number
 }
 
-export const TANULOSZOBAK = [
+export const TANULOSZOBAK:tanuloszobakTipus = [
     {
         id: 1,
         szoba_nev: "Csendes kuckó",

@@ -2,11 +2,12 @@ import { useState } from 'react'
 import './App.css'
 import Kartyak from './component/Kartyak'
 
+
 function App() {
   const [foglal, setFoglal]= useState(0)
 
   function kattintas(){
-    
+      setFoglal(foglal + 1)
   }
 
   return (
@@ -17,7 +18,9 @@ function App() {
                 <p>Talál meg számodra megfelelő tanulószobát!</p>
             </header>
             <main>
-                <Kartyak />
+                <Kartyak 
+                    kattintas={kattintas}
+                />
             </main>
             <footer>
                 <p>Stolár-Németh Villő</p>

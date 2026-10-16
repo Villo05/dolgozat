@@ -1,11 +1,14 @@
-
+import Kartya from './Kartya'
+import './Kartya.css'
 
 export default function Kartyak(){
     
 
     return(
         <>
-            <h2>{.szoba_nev}</h2>
+            <div>
+                <Kartya />
+            </div>
         </>
     )
 }
