@@ -4,20 +4,20 @@ import './Kartya.css'
 
 interface kartyakProps{
     elem:tanuloszobakTipus
-    kattintas:()=> void
 }
 
-export default function Kartyak({elem, kattintas}:kartyakProps){
+export default function Kartyak({elem}:kartyakProps){
     
     
-    
+
     return(
         <>
             <div>
-                <Kartya 
-                    elem={TANULOSZOBAK}
-                    kattintas={kattintas}    
-                />
+                {TANULOSZOBAK.map((szoba)=>(
+                    <Kartya key={szoba.id} elem={TANULOSZOBAK[0]}
+                    />
+                ))}
+                
             </div>
         </>
     )
