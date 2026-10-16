@@ -1,13 +1,23 @@
+import { TANULOSZOBAK, type tanuloszobakTipus } from '../adatok'
 import Kartya from './Kartya'
 import './Kartya.css'
 
-export default function Kartyak(){
-    
+interface kartyakProps{
+    elem:tanuloszobakTipus
+    kattintas:()=> void
+}
 
+export default function Kartyak({elem, kattintas}:kartyakProps){
+    
+    
+    
     return(
         <>
             <div>
-                <Kartya />
+                <Kartya 
+                    elem={TANULOSZOBAK}
+                    kattintas={kattintas}    
+                />
             </div>
         </>
     )

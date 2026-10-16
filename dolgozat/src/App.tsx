@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Kartyak from './component/Kartyak'
+import { TANULOSZOBAK } from './adatok'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             </header>
             <main>
                 <Kartyak 
+                    elem={TANULOSZOBAK}
                     kattintas={kattintas}
                 />
             </main>

@@ -10,7 +10,7 @@ export type tanuloszobakTipus={
     foglalt_helyek:number
 }
 
-export const TANULOSZOBAK:tanuloszobakTipus = [
+export const TANULOSZOBAK = [
     {
         id: 1,
         szoba_nev: "Csendes kuckó",

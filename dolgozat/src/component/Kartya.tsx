@@ -2,10 +2,10 @@ import type { tanuloszobakTipus } from "../adatok"
 
 interface kartyaProps{
     elem:tanuloszobakTipus,
-    kattinttas: ()=> void
+    kattintas: ()=> void
 }
 
-export default function Kartya(elem, kattintas){
+export default function Kartya({elem, kattintas}:kartyaProps){
     
     return(
         <>
